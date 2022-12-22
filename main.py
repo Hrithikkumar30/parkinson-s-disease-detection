@@ -35,13 +35,11 @@ X_test = sc.transform(X_test)
 #training model
 
 from sklearn.svm import SVC
-classifier = SVC(kernel = "rbf" , random_state = 0 )
+classifier = SVC(kernel = "rbf")
 classifier.fit(X_train , Y_train)
 
-Y_pred = classifier.predict(X_train)
+y_pred = classifier.predict(X_train)
 
 from sklearn.metrics import accuracy_score , confusion_matrix
-ac = accuracy_score(Y_train, Y_pred)
-print(ac)
-# print(np.concatenate((Y_pred.reshape(len(Y_pred),1), Y_test.reshape(len(Y_test),1)),1)) #concatenating predicted and actual values
+ac = accuracy_score()
 
